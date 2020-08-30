@@ -37,7 +37,7 @@ def main():
     vowelCount = countVowels(srcString)
     consonantCount = countConsonants(srcString)
     
-    print str(vowelCount) + " vowels and " + str(consonantCount) + " consonants."
+    print(str(vowelCount) + " vowels and " + str(consonantCount) + " consonants.")
     
 if __name__ == '__main__':
     main()

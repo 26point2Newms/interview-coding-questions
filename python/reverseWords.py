@@ -12,6 +12,9 @@ Created on Jan 11, 2017
 
 # This uses an iterate method
 def reverseString(targetStr):
+    '''
+    Brut Force:
+
     revStr = ""
     i = len(targetStr) - 1
     
@@ -20,6 +23,12 @@ def reverseString(targetStr):
         i -= 1
         
     return revStr
+    '''
+
+    '''
+    Or, one line:
+    '''
+    return targetStr[::-1]
         
 def main():
     src = "SIHT SI NA WEIVRETNI"
@@ -39,8 +48,8 @@ def main():
         if i < srcLen :
             resultStr += " "
     
-    print "src=" + src
-    print "reversed=" + resultStr
+    print("src=" + src)
+    print("reversed=" + resultStr)
         
 if __name__ =="__main__":
     main()

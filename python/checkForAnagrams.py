@@ -14,10 +14,30 @@ def charsMatch(firstString, secondString):
     for c in firstString:
         if not c in secondString:
             allMatch = False
-            break;
+            break
         
     return allMatch
-    
+
+def charsCount(firstStr, secondStr):
+    charDict = {}
+    for c in firstStr:
+        if len(charDict) == 0 or not c in charDict:
+            charDict[c] = 1
+        else:
+            charDict[c] += 1
+            
+    charDict2 = {}
+    for c in secondStr:
+        if len(charDict2) == 0 or not c in charDict2:
+            charDict2[c] = 1
+        else:
+            charDict2[c] += 1
+
+    for c in firstStr:
+        if charDict[c] != charDict2[c]:
+            return False
+    return True
+
 def anagramCheck(firstString, secondString):
     
     isAnagram = True
@@ -28,14 +48,18 @@ def anagramCheck(firstString, secondString):
     # each character in the 2nd string should be in the first and vice versa
     elif not charsMatch(firstString, secondString) or not charsMatch(secondString, firstString):
         isAnagram = False
-
+    # next we need to check the individual character counts in both strings
+    elif not charsCount(firstString, secondString):
+        isAnagram = False
     return isAnagram
     
 def main():
     str1 = "desserts"
     str2 = "stressed"
+    #str1 = "aacc"
+    #str2 = "ccac"
     
-    print anagramCheck(str1, str2)
+    print(anagramCheck(str1, str2))
 
 if __name__ == '__main__':
     main()

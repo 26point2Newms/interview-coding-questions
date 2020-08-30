@@ -44,8 +44,8 @@ def findDuplicateChars(srcStr):
     
 def main():
     srcString = "hippopotomonstrosesquippedaliophobia"
-    print str(findDuplicateChars(srcString.lower()))
-    print str(findDuplicateCharsWithCount(srcString.lower()))
+    print(str(findDuplicateChars(srcString.lower())))
+    print(str(findDuplicateCharsWithCount(srcString.lower())))
     
 if __name__ == '__main__':
     main()

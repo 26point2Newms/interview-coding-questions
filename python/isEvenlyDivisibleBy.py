@@ -16,9 +16,9 @@ def main():
     isDivisible = isDivisibleBy(testNumber, rOperand)
     
     if isDivisible == True:
-        print str(testNumber) + " is divisible (is a factor of) " + str(rOperand)
+        print(str(testNumber) + " is divisible (is a factor of) " + str(rOperand))
     else:
-        print str(testNumber) + " is NOT divisible (is NOT a factor of) " + str(rOperand)
+        print(str(testNumber) + " is NOT divisible (is NOT a factor of) " + str(rOperand))
     
 if __name__ == '__main__':
     main()
