@@ -35,12 +35,14 @@ def intersection(list1, list2):
 	match = dict()
 	
 	for n in list1:
+		# NOTE: "in" is the intended way to test for the existence of a key in a dict.
 		if n in match:
 			match[n] += 1
 		else:
 			match[n] = 1
 	
 	returnVal = []
+
 	for n in list2:
 		if n in match:
 			returnVal.append(n)
@@ -60,6 +62,19 @@ def main():
 	print("Intersection of listA: " + str(listA) + " and listB: " + str(listB) + 
 			" is: " +  str(intersection(listA, listB)))
 
+	listA = [753,987,456,1231,951,632,8741,93341,32,456,789,213,123,654,987,654,321]
+	listB = [987,654,321,741,852,963,951,753,874,325,987,654,321]
+	print("Intersection of listA: " + str(listA) + " and listB: " + str(listB) + 
+			" is: " +  str(intersection(listA, listB)))
+
+	listA = [5,7,9,4,6,9,9,9]
+	listB = [99,9,9,9,9,9,9,9,9,9]
+	print("Intersection of listA: " + str(listA) + " and listB: " + str(listB) + 
+			" is: " +  str(intersection(listA, listB)))
+
+
 if __name__ == '__main__':
 	main()
   
+
+

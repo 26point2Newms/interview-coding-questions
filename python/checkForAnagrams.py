@@ -56,10 +56,12 @@ def anagramCheck(firstString, secondString):
 def main():
     str1 = "desserts"
     str2 = "stressed"
-    #str1 = "aacc"
-    #str2 = "ccac"
-    
     print(anagramCheck(str1, str2))
+
+    str1 = "aacc"
+    str2 = "ccac"
+    print(anagramCheck(str1, str2))
+
 
 if __name__ == '__main__':
     main()

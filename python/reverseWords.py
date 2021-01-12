@@ -13,7 +13,7 @@ Created on Jan 11, 2017
 # This uses an iterate method
 def reverseString(targetStr):
     '''
-    Brut Force:
+    Brut Force Method:
 
     revStr = ""
     i = len(targetStr) - 1
