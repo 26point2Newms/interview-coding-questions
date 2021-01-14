@@ -10,11 +10,9 @@ Created on Jan 11, 2017
 @author: Charles Newman (https://github.com/26point2Newms)
 '''
 
-# This uses an iterate method
 def reverseString(targetStr):
+    # 1)  Brut Force Method:
     '''
-    Brut Force Method:
-
     revStr = ""
     i = len(targetStr) - 1
     
@@ -25,9 +23,19 @@ def reverseString(targetStr):
     return revStr
     '''
 
+    # 2) Using Python's slicing notation
     '''
-    Or, one line:
+    Slicing is a way of getting subsets of data structures. 
+    The basic notation is: [start:stop:step] 
+    The default for start is none or 0. 
+    The default stop is the end of your data structure. 
+    Using a positive number references from the first element, 
+    a negative number references from last element in your structure.
+    
+    So for example, given this list: mylist=[1,2,3,4,5,6,7,8,9]
+    This syntax: mylist[2:8:3] would return "[3,6]"
     '''
+
     return targetStr[::-1]
         
 def main():
